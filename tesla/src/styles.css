@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Pinyon+Script&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Noto+Serif+Georgian:wght@100..900&family=Orbitron:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ysabeau+SC:wght@1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&family=Yuji+Boku&display=swap');
+
+
+
+.span1{
+    color: #0e3742;
+    font-weight: bold;
+    animation: animate  linear infinite;
+    font-family: "Lacquer", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-shadow: 0 0 10px #03bcf4,
+    0 0 20px #03bcf4,
+    0 0 40px #03bcf4,
+    0 0 80px #03bcf4,
+    0 0 160px #03bcf4;
+  }
