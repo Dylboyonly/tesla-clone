@@ -27,7 +27,9 @@ export default function NavigationBar() {
           <div className="text-[14px]">Energy</div>
           <div className="text-[14px]">Charging</div>
           <div className="text-[14px]">Discover</div>
-          <div className="text-[14px]">Shop</div>
+          <Link href="/shop">
+            <div className="text-[14px]">Shop</div>
+          </Link>
         </nav>
         <div className="flex justify-end pr-10 w-1/3 gap-4 bg-transparent ">
           <img

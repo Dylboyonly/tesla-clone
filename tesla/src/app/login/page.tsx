@@ -43,7 +43,7 @@ export default function LoginPage() {
               <input
                 type="email"
                 placeholder="tesla@mail.com.."
-                className="w-full h-[45%] bg-neutral-100 rounded-sm px-4 text-[15px] text-black focus:border-neutral-500"
+                className="w-full h-[45%] bg-neutral-200 rounded-sm px-4 text-[15px] text-black focus:border-neutral-500"
               />
             </div>
             <div className="w-full h-1/3">
@@ -53,7 +53,7 @@ export default function LoginPage() {
               <input
                 type="password"
                 placeholder="***"
-                className="w-full h-[45%] bg-neutral-100 rounded-sm px-4 text-[15px] text-black"
+                className="w-full h-[45%] bg-neutral-200 rounded-sm px-4 text-[15px] text-black"
               />
             </div>
             <div className="w-full h-1/3 flex items-center">
@@ -70,7 +70,7 @@ export default function LoginPage() {
           <div className="divider mt-10 text-black">Or</div>
           <div className="w-full h-[15%]">
             <Link href="/register">
-              <button className="w-full h-[60%] bg-neutral-100 text-black font-medium rounded-sm hover:scale-110 transition-transform">
+              <button className="w-full py-3 bg-neutral-200 text-black text-[15px] font-medium rounded-sm hover:scale-110 transition-transform">
                 Create Account
               </button>
             </Link>

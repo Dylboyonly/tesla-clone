@@ -103,7 +103,7 @@ export default function RegisterPage() {
               developments and offerings
             </span>
             <Link href="/">
-              <button className="w-full rounded-sm py-2 px-2 text-white font-medium bg-blue-400 mt-20">
+              <button className="w-full rounded-sm py-3 px-2 text-white font-medium bg-blue-400 mt-20 hover:scale-110 transition-transform">
                 Create Account
               </button>
             </Link>

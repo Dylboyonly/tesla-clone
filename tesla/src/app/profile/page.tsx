@@ -60,14 +60,14 @@ export default function profilePage() {
               </ul>
             </div>
           </div>
-          <div className=" w-[80%] h-full  pl-10">
-            <div className="w-full h-[9%] pt-4">
+          <div className=" w-[80%] h-full pl-11">
+            <div className="w-full h-[9%] pt-4 pl-2">
               <span className="text-3xl text-black font-medium">
                 My Products
               </span>
             </div>
             <div className="w-full h-[89%] flex gap-6 px-2 py-2">
-              <div className="w-[20rem] h-[14rem] border border-black border-[0.4px]">
+              <div className="w-[30%] h-[37%] border border-black border-[0.4px]">
                 <figure className="w-full h-1/2">
                   <img
                     className="w-full h-full object-cover"
@@ -89,7 +89,7 @@ export default function profilePage() {
                   </a>
                 </div>
               </div>
-              <div className="w-[20rem] h-[14rem] border border-black border-[0.4px]">
+              <div className="w-[30%] h-[37%] border border-black border-[0.4px]">
                 <figure className="w-full h-1/2">
                   <img
                     className="w-full h-full object-cover"

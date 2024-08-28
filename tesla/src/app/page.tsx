@@ -1,5 +1,6 @@
 import NavigationBar from "@/components/Navbar";
 import "@/styles.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -25,9 +26,12 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full h-[15vh] bottom-0 absolute flex justify-center items-center gap-5">
-          <button className="w-[16%] h-[30%] bg-blue-500 rounded-md text-white hover:scale-110 transition-transform">
+          <Link
+            href="cars/model3"
+            className="w-[16%] h-[30%] bg-blue-500 flex justify-center items-center rounded-md text-white hover:scale-110 transition-transform"
+          >
             Order Now
-          </button>
+          </Link>
           <button className="w-[16%] h-[30%] bg-slate-100 rounded-md text-black hover:scale-110 transition-transform">
             Demo Drive
           </button>
@@ -107,9 +111,12 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full h-[15vh] bottom-0 absolute flex justify-center items-center gap-5">
-          <button className="w-[16%] h-[33%] bg-black bg-opacity-60 backdrop-blur-md rounded-sm border border-white text-white border-t-4 hover:scale-110 transition-transform">
+          <Link
+            href="cars/cybertruck"
+            className="w-[16%] h-[33%] bg-black flex justify-center items-center  bg-opacity-60 backdrop-blur-md rounded-sm border border-white text-white border-t-4 hover:scale-110 transition-transform"
+          >
             Order Now
-          </button>
+          </Link>
           <button className="w-[16%] h-[33%] bg-black bg-opacity-60 backdrop-blur-md rounded-sm border border-white text-white border-b-4 hover:scale-110 transition-transform">
             Demo Drive
           </button>
