@@ -1,6 +1,7 @@
 import NavigationBar from "@/components/Navbar";
 import "@/styles.css";
 import Link from "next/link";
+import { cookies } from "next/headers";
 
 export default function Home() {
   return (
@@ -147,7 +148,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="h-[94vh] w-full bg-slate-black bg-[url(https://images.squarespace-cdn.com/content/v1/626df45e313c077c4ff2703d/6988c999-6953-4d04-a21f-4c9f26907850/tesla-wall-connector.jpeg)] bg-cover overflow-auto relative">
+      <div className="h-[94vh] w-full bg-slate-black bg-[url(https://images.squarespace-cdn.com/content/v1/626df45e313c077c4ff2703d/6988c999-6953-4d04-a21f-4c9f26907850/tesla-wall-connector.jpeg)] bg-cover bg-center overflow-auto relative">
         <div className="w-full h-[10vh] flex items-end justify-center">
           <div className="w-full h-1/3 flex items-center justify-center">
             <span className="text-5xl text-white font-bold ">Accesories</span>

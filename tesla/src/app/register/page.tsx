@@ -1,6 +1,32 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default function RegisterPage() {
+  const handleFormAction = async (formData: FormData) => {
+    "use server";
+
+    const res = await fetch(`http://localhost:3000/api/register`, {
+      method: "POST",
+      body: JSON.stringify({
+        name: formData.get("name"),
+        username: formData.get("username"),
+        email: formData.get("email"),
+        password: formData.get("password"),
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const responseJson = await res.json();
+    console.log(responseJson);
+
+    if (!res.ok) {
+      let message = responseJson.error ?? "Something went wrong";
+      return redirect(`/register?error=${message}`);
+    }
+    return redirect("/login");
+  };
   return (
     <div className="w-full h-screen bg-white">
       <div className="w-full h-[10%]">
@@ -38,10 +64,10 @@ export default function RegisterPage() {
               Create Account
             </span>
           </div>
-          <form className=" w-full h-[85%]">
+          <form className=" w-full h-[85%]" action={handleFormAction}>
             <div className="h-[13%] w-full">
               <label className="text-[13px] text-slate-600 font-semibold flex items-center gap-1">
-                First Name
+                Name
                 <img
                   className="w-3 h-3"
                   src="https://cdn.iconscout.com/icon/premium/png-512-thumb/circle-8258189-6849508.png?f=webp&w=512"
@@ -51,11 +77,12 @@ export default function RegisterPage() {
                 type="text"
                 placeholder="Jane"
                 className="py-2 px-2 rounded-sm w-full bg-neutral-100 text-[14px] text-black mt-2"
+                name="name"
               />
             </div>
             <div className="h-[13%] w-full">
               <label className="text-[13px] text-slate-600 font-semibold text-[14px] text-black flex items-center gap-1">
-                Last Name
+                Username
                 <img
                   className="w-3 h-3"
                   src="https://cdn.iconscout.com/icon/premium/png-512-thumb/circle-8258189-6849508.png?f=webp&w=512"
@@ -65,6 +92,7 @@ export default function RegisterPage() {
                 type="text"
                 placeholder="Smith"
                 className="py-2 px-2 rounded-sm w-full bg-neutral-100 text-[14px] text-black mt-2"
+                name="username"
               />
             </div>
             <div className="h-[13%] w-full ">
@@ -76,9 +104,10 @@ export default function RegisterPage() {
                 />
               </label>
               <input
-                type="text"
+                type="email"
                 placeholder="tesla@mail.com.."
                 className="py-2 px-2 rounded-sm w-full bg-neutral-100 text-[14px] text-black mt-2"
+                name="email"
               />
             </div>
             <div className="h-[13%] w-full ">
@@ -93,6 +122,7 @@ export default function RegisterPage() {
                 type="text"
                 placeholder="***"
                 className="py-2 px-2 rounded-sm w-full bg-neutral-100 text-[14px] text-black mt-2"
+                name="password"
               />
             </div>
             <span className="text-[12px] text-slate-600">
@@ -102,11 +132,9 @@ export default function RegisterPage() {
               latest products, ensuring you're always informed about the newest
               developments and offerings
             </span>
-            <Link href="/">
-              <button className="w-full rounded-sm py-3 px-2 text-white font-medium bg-blue-400 mt-20 hover:scale-110 transition-transform">
-                Create Account
-              </button>
-            </Link>
+            <button className="w-full rounded-sm py-3 px-2 text-white font-medium bg-blue-400 mt-20 hover:scale-110 transition-transform">
+              Create Account
+            </button>
           </form>
         </div>
       </div>

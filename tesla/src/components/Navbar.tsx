@@ -21,9 +21,7 @@ export default function NavigationBar() {
           </svg>
         </Link>
         <nav className="pt-2 pb-2 cursor-pointer gap-[30px] w-1/3 bg-transparent h-[100%] items-center justify-center text-black font-medium ">
-          <Link href="/tesla">
-            <div className="text-[14px]">Vehicles</div>
-          </Link>
+          <div className="text-[14px]">Vehicles</div>
           <div className="text-[14px]">Energy</div>
           <div className="text-[14px]">Charging</div>
           <div className="text-[14px]">Discover</div>

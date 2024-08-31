@@ -1,5 +1,8 @@
 import NavigationBar from "@/components/Navbar";
+import { imageOptimizer } from "next/dist/server/image-optimizer";
+import { cookies } from "next/headers";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default function profilePage() {
   return (
@@ -47,16 +50,23 @@ export default function profilePage() {
                   />
                   <span>Order History</span>
                 </li>
-                <Link
-                  href="/login"
+                <form
                   className="w-full flex gap-5 items-center hover:translate-x-2 transition-transform ease-in duration-200"
+                  action={async () => {
+                    "use server";
+
+                    // Menghapus cookie token bila exists
+                    cookies().get("token") && cookies().delete("token");
+                    // Redirect ke halaman login
+                    redirect("/login");
+                  }}
                 >
                   <img
                     className="h-6 w-6"
                     src="https://icons.veryicon.com/png/o/construction-tools/water-conservancy-project-icon/sign-out-2.png"
                   />
-                  <span>Sign Out</span>
-                </Link>
+                  <button type="submit">Sign Out</button>
+                </form>
               </ul>
             </div>
           </div>
